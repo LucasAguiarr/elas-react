@@ -1,8 +1,54 @@
-# My-App
+<div align="center">
+  <img src='https://raw.githubusercontent.com/LucasAguiarr/elas-expo/main/src/assets/images/Logo.png' alt="Logo elements">
+  <br>
+  <h1>ELAS</h1>
+  <br>
+    <h4>
+  O projeto incial é desenvolver um Aplicativo de alerta de abuso sexual com geolocalização para notificar
+  imediatamente a polícia de ataques. A função primária dele será cadastrar as vítimas em um banco de dados,
+  onde o cadastro será compartilhado com a Polícia no momento que o botão “PERIGO” for pressionado no
+  aplicativo. A informação enviada deverá conter a localização da vítima, e todos os seus dados cadastrais
+  preenchidos previamente para facilitar o trabalho da Polícia.
+  <strong><br>
+  Nesta etapa iremos desenolver a interface web na qual a polícia receberá os pedidos de ajuda
+  assim como todas as informações pré-cadastradas e a localização da vítima
+  </strong>
+  </h4>
+  <br>
 
-*Este site foi está sendo desenvolvido para uso pessoal.*
+  <h2>Requisitos</h2>
+  <br>
+  <p>
+   instalar node js
+   instalar yarn
+  </p>
+  <br>
 
-## Ideia inicial
-Criar um site para vendas de sites e aplicativos.
+  <h2>Instalação</h2>
 
-![Screenshot from 2021-05-09 21-18-26](https://user-images.githubusercontent.com/65921350/117722654-b80e2b80-b1b7-11eb-9966-ddcf900dda1e.png)
+    yarn install
+
+  <br>
+
+    yarn run dev
+
+<h2>Tecnologias :rocket: </h2>
+ </div>
+
+- [nodejs](https://nodejs.org/en/)
+- [Typescript](https://www.typescriptlang.org)
+- [prisma](https://www.prisma.io/)
+
+<br>
+<br>
+
+---
+
+### Nome dos participantes
+
+- Keliven Demarchi <br>
+- Lucas Aguiar <br>
+- Lucas Borges <br>
+- Patricia Regina <br>
+  <br>
+  Made with ♥ by Lucas Aguiar :wave: [Get in touch!](https://www.linkedin.com/in/lucasaguiiar)
