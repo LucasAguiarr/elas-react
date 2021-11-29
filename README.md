@@ -10,8 +10,7 @@
   aplicativo. A informação enviada deverá conter a localização da vítima, e todos os seus dados cadastrais
   preenchidos previamente para facilitar o trabalho da Polícia.
   <strong><br>
-  Nesta etapa iremos desenolver a interface web na qual a polícia receberá os pedidos de ajuda
-  assim como todas as informações pré-cadastradas e a localização da vítima
+  Nesta etapa iremos desenvolver a interface web na qual será realizado o cadastro dos usuários-Polícia, utilizaremos a autenticação de JWT Token e também daremos     inicio a uma tela de dashboard. Além disso, futuramente,  receberá os pedidos de ajuda assim como todas as informações pré-cadastradas e a localização da vítima
   </strong>
   </h4>
   <br>
