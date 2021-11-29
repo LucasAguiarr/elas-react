@@ -17,10 +17,10 @@
 
   <h2>Requisitos</h2>
   <br>
-  <p>
-   instalar node js
-   instalar yarn
-  </p>
+  <ul align="left">
+    <li>instalar node js</li>
+    <li>instalar yarn</li>
+  </ul>
   <br>
 
   <h2>Instalação</h2>
