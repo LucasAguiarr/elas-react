@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Colors } from "../../utils";
 
 export const Container = styled.div`
   display: flex;
@@ -6,10 +7,8 @@ export const Container = styled.div`
   height: 100vh;
   background-image: linear-gradient(
     90deg,
-    rgba(50, 54, 75, 1) 0%,
-    rgba(60, 65, 91, 1) 10%,
-    rgba(113, 200, 167, 1) 54%,
-    rgba(127, 224, 187, 1) 79%
+    ${Colors.gradient.dark} 0%,
+    ${Colors.gradient.light} 100%
   );
   justify-content: center;
   align-items: center;
@@ -22,7 +21,6 @@ export const WrapperModal = styled.div`
   width: 80vh;
   border-radius: 10px;
 
-
   @media (max-width: 450px) {
     height: 80%;
     width: 100%;
@@ -33,7 +31,7 @@ export const WrapperModal = styled.div`
 export const ContainerSlider = styled.div`
   flex: 1;
   border-radius: 10px 0 0 10px;
-  background-color: #7fe0bb;
+  background-color: ${Colors.gray_dark};
   padding: 16px;
 
   @media (max-width: 750px) {
@@ -43,11 +41,7 @@ export const ContainerSlider = styled.div`
 export const WrapperSliderIcon = styled.div`
   width: 100%;
 `;
-export const SliderIcon = styled.img`
-  width: 25px;
-  height: 25px;
-  opacity: 0.8;
-`;
+
 export const WrapperSliderContent = styled.div`
   display: flex;
   flex-direction: column;
@@ -57,21 +51,17 @@ export const WrapperSliderContent = styled.div`
   align-items: center;
 `;
 export const SliderTitle = styled.h4`
-  color: #eee;
+  color:  ${Colors.white};
   font-weight: 700;
   font-family: sans-serif;
   padding-top: 50px;
-`;
-export const SlicerImage = styled.img`
-  width: 100px;
-  height: 100px;
 `;
 
 // Right
 export const ContainerSignInSignUp = styled.div`
   flex: 1;
   border-radius: 0 10px 10px 0;
-  background-color: #32364b;
+  background-color:  ${Colors.black};
   padding: 16px;
 
   @media (max-width: 750px) {

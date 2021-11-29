@@ -1,18 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { createGlobalStyle } from "styled-components";
 import { Routes } from "./routes";
 import { AuthProvider } from "./contexts/auth";
+import { GlobalStyle } from "./styles/GlobalStyles";
 
-const GlobalStyle = createGlobalStyle`
- * {
-  padding:0;
-  margin:0;
-  vertical-align:baseline;
-  list-style:none;
-  border:0
-  }
-`;
 
 ReactDOM.render(
   <React.StrictMode>

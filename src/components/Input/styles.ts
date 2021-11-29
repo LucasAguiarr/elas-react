@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Colors } from "../../utils";
 
 interface IInput {
   confirmed: boolean;
@@ -9,7 +10,7 @@ export const Container = styled.div`
 `;
 
 export const Text = styled.h5`
-  color: rgba(255, 255, 255, 0.8);
+  color: ${Colors.white};
   font-family: sans-serif;
   padding-bottom: 8px;
 `;
@@ -21,11 +22,10 @@ export const Input = styled.input`
   padding-bottom: 10px;
   width: 100%;
   border-bottom: 1px solid
-    ${(props: IInput) =>
-      props.confirmed ? "#7fe0bb" : "rgba(255, 255, 255, 0.2)"};
+    ${(props: IInput) => (props.confirmed ? Colors.orange : Colors.gray_dark)};
 
   :focus {
-    border-bottom: 1px solid #7fe0bb;
+    border-bottom: 1px solid ${Colors.orange};
   }
 `;
 
@@ -33,12 +33,4 @@ export const WrapperInput = styled.div`
   display: flex;
   align-items: center;
   position: relative;
-`;
-
-export const Image = styled.img`
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  position: absolute;
-  right: 0;
 `;

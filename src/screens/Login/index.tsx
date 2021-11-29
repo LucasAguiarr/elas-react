@@ -5,22 +5,20 @@ import {
   WrapperModal,
   ContainerSlider,
   WrapperSliderIcon,
-  SliderIcon,
   WrapperSliderContent,
   SliderTitle,
-  SlicerImage,
   ContainerSignInSignUp,
   WrapperSwitch,
 } from "./styles";
-import coffeeImage from "../../assets/images/coffee.png";
-import rocketImage from "../../assets/images/rocket.png";
-import Inputs from "../../components/Input";
+import { Colors } from "../../utils";
+import { Inputs } from "../../components/Input";
 
-import Switch from "../../components/Switch";
+import { Switch } from "../../components/Switch";
 import { FormComponent } from "../../components/Form";
 import { AuthContext, IUserSignIn, IUserSignUp } from "../../contexts/auth";
+import { Coffee, Rocket } from "@styled-icons/boxicons-regular";
 
-const Login = () => {
+export const Login = () => {
   const history = useHistory();
   const { user, signIn, signUp } = useContext(AuthContext);
   const [loading, setLoading] = useState(false);
@@ -41,8 +39,10 @@ const Login = () => {
 
   useEffect(() => {
     if (user) {
-      history.push("/dashboard");
+      history.push("/");
     }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
 
   const cmdSignUp = async () => {
@@ -76,10 +76,9 @@ const Login = () => {
     setMessageError("");
 
     try {
-      const res = await signIn(userSignIn);
-      console.log(res);
+      await signIn(userSignIn);
       setIsDone(true);
-      history.push("/dashboard");
+      history.push("/");
     } catch (error: any) {
       let message: string;
       if (error.request.status === 401) {
@@ -197,13 +196,13 @@ const Login = () => {
       <WrapperModal>
         <ContainerSlider>
           <WrapperSliderIcon>
-            <SliderIcon src={coffeeImage} />
+            <Coffee size={25} color={Colors.orange} />
           </WrapperSliderIcon>
           <WrapperSliderContent>
             <SliderTitle>
               Plan your activities and control your progress online
             </SliderTitle>
-            <SlicerImage src={rocketImage} />
+            <Rocket size={200} color={Colors.gray_light} />
           </WrapperSliderContent>
         </ContainerSlider>
 
@@ -218,5 +217,3 @@ const Login = () => {
     </Container>
   );
 };
-
-export { Login };

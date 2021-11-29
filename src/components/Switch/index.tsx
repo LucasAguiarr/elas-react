@@ -7,7 +7,7 @@ interface IProps {
   text?: string;
 }
 
-const Switch: React.FC<IProps> = ({ onClick, check, text }) => {
+export const Switch: React.FC<IProps> = ({ onClick, check, text }) => {
   const [checked, setChecked] = useState(false);
 
   useEffect(() => {
@@ -25,5 +25,3 @@ const Switch: React.FC<IProps> = ({ onClick, check, text }) => {
     </Container>
   );
 };
-
-export default Switch;

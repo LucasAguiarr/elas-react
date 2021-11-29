@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { Colors } from "../../utils";
 
 interface IProps {
   clicked: boolean;
@@ -32,7 +33,6 @@ export const WrapperContent = styled.div`
 
   @media (max-width: 450px) {
     margin: 30px 30px;
-
   }
 `;
 export const WrapperTitles = styled.div`
@@ -50,22 +50,22 @@ export const WrapperTitles = styled.div`
 export const SignIn = styled.h3`
   font-family: sans-serif;
   color: ${(props: IProps) =>
-    props.clicked ? "#eee" : "rgba(255, 255, 255, 0.5)"};
+    props.clicked ? Colors.white : Colors.gray_dark};
   border-bottom: ${(props: IProps) =>
-    props.clicked ? "1px solid #7fe0bb" : "none"};
+    props.clicked ? `1px solid ${Colors.orange}` : "none"};
   padding-bottom: 5px;
 `;
 export const Or = styled.h5`
   font-family: sans-serif;
-  color: rgba(255, 255, 255, 0.5);
+  color: ${Colors.gray_dark};
   padding: 0 10px 5px 10px;
 `;
 export const SignUp = styled.h3`
   font-family: sans-serif;
   color: ${(props: IProps) =>
-    !props.clicked ? "#eee" : "rgba(255, 255, 255, 0.5)"};
+    !props.clicked ? Colors.white : Colors.gray_dark};
   border-bottom: ${(props: IProps) =>
-    !props.clicked ? "1px solid #7fe0bb" : "none"};
+    !props.clicked ? `1px solid ${Colors.orange}` : "none"};
   padding-bottom: 5px;
 `;
 
@@ -78,7 +78,7 @@ export const WrapperTerms = styled.div`
 export const TextTerms = styled.div`
   padding-left: 10px;
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.3);
+  color: ${Colors.gray_dark};
 `;
 
 export const WrapperButton = styled.div`
@@ -94,6 +94,6 @@ export const WrapperButton = styled.div`
 // Text error
 export const TextError = styled.h5`
   font-family: sans-serif;
-  color: #e94e4e;
+  color: ${Colors.red};
   font-size: 10px;
 `;

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Button from "../Button";
-import CheckBox from "../CheckBox";
+import { Button } from "../Button";
+import { CheckBox } from "../CheckBox";
 import {
   Container,
   WrapperContent,
