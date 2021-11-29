@@ -9,7 +9,7 @@ interface IProps {
   onClick: () => void;
 }
 
-const Button: React.FC<IProps> = ({
+export const Button: React.FC<IProps> = ({
   check,
   text,
   onClick,
@@ -34,5 +34,3 @@ const Button: React.FC<IProps> = ({
     </Container>
   );
 };
-
-export default Button;

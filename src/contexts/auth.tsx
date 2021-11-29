@@ -1,7 +1,5 @@
-import { useHistory } from "react-router";
 import { createContext, ReactNode, useEffect, useState } from "react";
 import { api } from "../services/api";
-import { AxiosResponse } from "axios";
 
 interface IAuthProvider {
   children: ReactNode;

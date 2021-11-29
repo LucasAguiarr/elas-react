@@ -10,7 +10,7 @@ import { Dashboard } from "../screens/Dashboard";
 import { AuthContext } from "../contexts/auth";
 import { Login } from "../screens/Login";
 
-const Routes: React.FC<RouteProps> = ({ ...rest }) => {
+export const Routes: React.FC<RouteProps> = ({ ...rest }) => {
   const { user } = useContext(AuthContext);
 
   return (
@@ -21,7 +21,7 @@ const Routes: React.FC<RouteProps> = ({ ...rest }) => {
         </Route>
 
         <Route
-          path="/dashboard"
+          path="/"
           render={({ location }) =>
             user ? (
               <Dashboard />
@@ -39,5 +39,3 @@ const Routes: React.FC<RouteProps> = ({ ...rest }) => {
     </BrowserRouter>
   );
 };
-
-export { Routes };

@@ -1,88 +1,40 @@
-import React from 'react';
-
-import Button from '../ButtonTwitter';
+import React, { useContext } from "react";
+import { WrapperFixed, Wrapper, WrapperInfo } from "./styles";
+import { Colors } from "../../utils";
+import { MenuIcon } from "../MenuIcon";
 import { AuthContext } from "../../contexts/auth";
-import { useContext, useState } from "react";
+import { ShieldError } from "@styled-icons/fluentui-system-regular/ShieldError";
+import { SettingsOutline } from "@styled-icons/evaicons-outline";
+import { Location } from "@styled-icons/ionicons-outline/Location";
+import { UserPlus } from "@styled-icons/boxicons-regular/UserPlus";
+import { Logout } from "@styled-icons/heroicons-solid/Logout";
 
-import { 
-  Container, 
-  Topside, 
-  Logo, 
-  MenuButton,
-  HomeIcon,
-  BellIcon,
-  EmailIcon,
-  FavoriteIcon,
-  ProfileIcon,
-  Botside,
-  Avatar,
-  ProfileData,
-  ExitIcon,
-  ExporeIcon,
-  ListIcon
-} from './styles';
+export const MenuBar = () => {
+  const { signOut } = useContext(AuthContext);
 
-const MenuBar: React.FC = () => {
-  const { user, signOut } = useContext(AuthContext);
   return (
-    <Container>
-      <Topside>
+    <WrapperFixed>
+      <Wrapper>
+        <MenuIcon onCLick={() => {}}>
+          <ShieldError size={30} color={Colors.orange} />
+        </MenuIcon>
 
-        <Logo />
+        <WrapperInfo>
+          <MenuIcon text="Localização" onCLick={() => {}}>
+            <Location size={30} color={Colors.gray_light} />
+          </MenuIcon>
+          <MenuIcon text="Configurações" onCLick={() => {}}>
+            <SettingsOutline size={30} color={Colors.gray_light} />
+          </MenuIcon>
+          <MenuIcon text="Usuários" onCLick={() => {}}>
+            <UserPlus size={30} color={Colors.gray_light} />
+          </MenuIcon>
+        </WrapperInfo>
 
-        <MenuButton>
-          <HomeIcon />
-          <span>Home page</span>
-        </MenuButton>
-
-        <MenuButton>
-          <ExporeIcon />
-          <span>To explore</span>
-        </MenuButton>
-
-        <MenuButton>
-          <BellIcon />
-          <span>Notifications</span>
-        </MenuButton>
-
-        <MenuButton>
-          <EmailIcon />
-          <span>Messages</span>
-        </MenuButton>
-
-        <MenuButton>
-          <FavoriteIcon />
-          <span>Favorites</span>
-        </MenuButton>
-
-        <MenuButton>
-          <ListIcon />
-          <span>List</span>
-        </MenuButton>
-
-        <MenuButton className="active">
-          <ProfileIcon />
-          <span>Profile</span>
-        </MenuButton>
-
-        <Button>
-          <span>Tweetar</span>
-        </Button>
-
-      </Topside>
-
-      <Botside onClick={signOut}>
-        <Avatar />
-
-        <ProfileData>
-          <strong>Lucas Borges</strong>
-          <span>@lucasluisborges</span>
-        </ProfileData>
-
-        <ExitIcon />
-      </Botside>
-    </Container>
+        <MenuIcon text="Sair" onCLick={signOut}>
+          <Logout size={30} color={Colors.gray_light} />
+        </MenuIcon>
+      </Wrapper>
+    </WrapperFixed>
   );
-}
-
-export default MenuBar;
+};

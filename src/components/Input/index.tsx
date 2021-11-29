@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { Container, Text, Input, WrapperInput, Image } from "./styles";
-
-import eye from "../../assets/images/eye.png";
-import noeye from "../../assets/images/noeye.png";
+import { Container, Text, Input, WrapperInput } from "./styles";
+import { Colors } from "../../utils";
+import { Eye, EyeOff } from "@styled-icons/evaicons-solid";
 
 interface IProps {
   text: string;
@@ -12,7 +11,7 @@ interface IProps {
   confirmed: boolean;
   onChange: (e: any) => void;
 }
-const Inputs = ({
+export const Inputs = ({
   placeholder,
   text,
   onChange,
@@ -32,15 +31,31 @@ const Inputs = ({
           onChange={onChange}
           value={value}
         />
-        {security && (
-          <Image
-            onClick={() => setVisible(!visible)}
-            src={visible ? noeye : eye}
-          />
-        )}
+        {security &&
+          (visible ? (
+            <Eye
+              onClick={() => setVisible(!visible)}
+              size={20}
+              style={{
+                cursor: "pointer",
+                position: "absolute",
+                right: 0,
+              }}
+              color={Colors.gray_dark}
+            />
+          ) : (
+            <EyeOff
+              onClick={() => setVisible(!visible)}
+              size={20}
+              style={{
+                cursor: "pointer",
+                position: "absolute",
+                right: 0,
+              }}
+              color={Colors.orange}
+            />
+          ))}
       </WrapperInput>
     </Container>
   );
 };
-
-export default Inputs;

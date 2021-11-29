@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Colors } from "../../utils";
 
 interface IProps {
   checked?: boolean;
@@ -8,7 +9,7 @@ export const Container = styled.button`
   width: 100px;
   height: 30px;
   background-color: ${(props: IProps) =>
-    props.checked ? "rgba(127, 224, 187, 1)" : "#434864"};
+    props.checked ? Colors.orange : Colors.gray_dark};
   justify-content: center;
   align-items: center;
   border-radius: 20px;
@@ -21,13 +22,13 @@ export const Container = styled.button`
 `;
 
 export const Text = styled.h5`
-  color: rgba(255, 255, 255, 1);
+  color:  ${Colors.white};
   font-family: sans-serif;
   font-weight: 400;
 `;
 
 export const Loader = styled.div`
-  border: 5px solid #32364b;
+  border: 5px solid  ${Colors.gray_light};
   border-top: 5px solid transparent;
   border-radius: 50%;
   width: 10px;
